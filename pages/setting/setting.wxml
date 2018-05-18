@@ -1,0 +1,21 @@
+<!--pages/setting/setting.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <input class="weui-input phone" type="number" value="{{phone}}" bindinput="onPhoneInput" placeholder="请输入手机号码" />
+  <button class="weui-btn search" bindtap="onSearch" type="default">搜索</button>
+</view>
+
+<view wx:if="{{user_ui_visibility}}">
+   <view class="user">
+    <text class='user_name'>用户：{{user.name}}</text>
+    <view class="dividing"></view>
+  </view>
+</view>
+
+<view id="list" wx:for="{{list_data}}">
+  <view class="items">
+    <text class='item service_type'>{{item.type}}</text>
+    <text class='item service_name'>{{item.service}}</text>
+    <text class='item date_time'>{{item.date}}</text>
+    <image class='item more'></image>
+  </view>
+</view>

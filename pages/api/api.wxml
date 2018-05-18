@@ -1,0 +1,12 @@
+<!--pages/api/api.wxml-->
+  <view class="weui-cells weui-cells_after-title">
+    <input class="weui-input phone" placeholder="请输入Service名称" /> 
+    <button class="weui-btn search" type="default" >搜索</button>
+  </view>
+
+ <view id="list" wx:for="{{list_data}}">
+ <view class="item">
+ <text class='item_service_name'>{{item.service}}</text>
+ <text class='item_count'>{{item.count}}</text>
+ </view>
+</view> 
